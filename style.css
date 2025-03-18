@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+body {
+  /* overflow-x : hidden; */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  overflow-y: hidden;
+    margin-top: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 100%;
+    min-width: 1440px;
+    overflow: none;
+    padding: 0px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 200px 80px 120px 200px;
+  gap: 10px;
+}
+.child-1 + .child-2 + .child-3 + .child-4 + .child-5 + .child-6 + .child-7 + .child-8 {
+  border-radius: 10px;
+}
+
+.child-1 {
+  background-color: hsl(31, 66%, 93%);
+  padding: 25px 15px;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.child-2 {
+  background-color: hsl(256, 67%, 59%);
+  padding: 20px;
+  grid-column: 2/4;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.child-3 {
+  background-color: hsl(254, 88%, 90%);
+  padding: 10px;
+  grid-column: 4/5;
+  grid-row: 1/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.child-4 {
+  background-color: hsl(39, 100%, 71%);
+  padding: 10px;
+  grid-column: 1/2;
+  grid-row: 3/5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.child-5 {
+  background-color: hsl(0, 0%, 100%);
+  padding: 10px;
+  grid-column: 2/3;
+  grid-row: 2/4;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: space-between; */
+}
+.child-6 {
+  background-color: hsl(39, 100%, 71%);
+  padding: 10px;
+  grid-column: 3/4;
+  grid-row: 2/4;
+  display: flex;
+  flex-direction: column;
+  overflow:  hidden;   /* ye img ke overflow ko handle kr raha hai jo ki container ke bahr overflow kr rhi thi gap vale part me */
+  /* Hides any content that overflows the container */
+}
+.child-7 {
+  background-color:hsl(0, 0%, 100%);
+  padding: 10px;
+  padding-left: 25px;
+  grid-column: 2/3;
+  grid-row: 4/5;
+  overflow: hidden;
+}
+.child-8 {
+  background-color: hsl(256, 67%, 59%);
+  padding: 10px;
+  grid-column: 3/5;
+  grid-row: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p{
+  font-size: 18px;
+}
+.child-1 > p{
+  font-size: 30px;
+  font-weight: 400;
+}
+.child-1 > i{
+  color: hsl(256, 67%, 59%);
+}
+.child-1 > img{
+  height: 60px;
+}
+
+.child-2 > #para1Of2{
+  font-size: 45px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+#para1Of2 > span{
+  color: hsl(39, 100%, 71%);
+}
+.child-2 > img{
+  width: 160px;
+  
+}
+
+.child-3 > img{
+  height: 170px;
+  width: 170px;
+}
+.child-3 > #para1Of3{
+  font-size: 30px;
+  font-weight: 500;
+}
+.child-3 > img{
+  align-self: flex-end;
+}
+.child-3 > #para2Of3{
+  font-size: 18px;
+}
+
+.child-4 > p{
+  font-size: 35px;
+  font-weight: 500;
+}
+.child-4 > img{
+  height: 160px;
+  width: 160px;
+}
+
+.child-5 > img{
+  height: 80px;
+  width: 230px;
+  padding-bottom: 4px;
+}
+.child-5 > p {
+  font-size: 25px;
+  font-weight: 400;
+  padding-left: 5px;
+}
+.child-6 > p {
+  font-size: 25px;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+.child-6 > img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /*keeps the aspect ratio and fills the container*/ 
+  /* overflow: hidden; */  /* -->  Not needed, as the container already handles overflow */
+  object-position: top; /* Aligns the image to the top, hiding the bottom part */
+}
+
+.child-7 > #para1Of7 {
+  font-size: 50px;
+  font-weight: 500;
+}
+.child-7 > #para2Of7 {
+  padding-bottom: 25px;
+}
+.child-7 > img{
+  height: 35%;
+  width: 80%;
+  /* object-fit: cover; keeps the aspect ratio and fills the container */
+}
+
+.child-8 > img {
+  height: 100%;
+  width: 100%;
+}
+.child-8 > p {
+  font-size: 30px;
+  font-weight: 500;
+  object-fit: cover;
+  color: hsl(0, 0%, 100%);
+}
+
+
+@media (max-width: 375px) {
+  body{
+    height: auto;
+    display: block;
+  }
+
+  .container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .child-1, .child-2, .child-3, .child-4, .child-5, .child-6, .child-7, .child-8 {
+    width: 100%;
+    height: auto;
+  }
+  
+  .child-8{
+    display: flex;
+    flex-direction: column;
+  }
+  .child-8 > img {
+    height: 80%
+  }
+  .child-8 > p {
+    padding-top: 5px;
+  }
+  
+}
